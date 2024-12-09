@@ -18,11 +18,22 @@ HAVING AVG(salary) > 75000;
 
 ##  Limit and Aliasing
 
+SELECT *
+FROM parks_and_recreation.employee_demographics
+ORDER BY age DESC
+LIMIT 2 ;
+
+
+SELECT *
+FROM parks_and_recreation.employee_demographics
+ORDER BY age DESC
+LIMIT 2 , 1;       ## Limiting ###
+  
 SELECT gender, 
 AVG(age) AS avg_age
 FROM parks_and_recreation.employee_demographics
 GROUP BY gender
-HAVING AVG(age) > 30;
+HAVING AVG(age) > 30;               ## aliasing ##
 
 SELECT gender, 
 COUNT(age) AS count_age
