@@ -74,6 +74,6 @@ JOIN parks_and_recreation.employee_salary AS emp2
  INNER JOIN parks_and_recreation.employee_salary as sal
   ON dem.employee_id = sal.employee_id
 INNER JOIN parks_and_recreation.parks_departments as pd
-  ON sal.dept_id = pd.department_id ;
+  ON sal.dept_id = pd.department_id ;                  ## JUST LOOK FOR THE COMMON COLUMNS TO JOIN 
  
  
