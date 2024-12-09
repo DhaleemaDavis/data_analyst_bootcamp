@@ -1,4 +1,5 @@
-# CASE STATEMENTS
+############# CASE STATEMENTS  ################
+## similar to conditional statements in other programming language
 
 SELECT first_name, last_name,
 CASE WHEN age < 30 
@@ -16,9 +17,9 @@ END AS Age_bracket
 FROM parks_and_recreation.employee_demographics;
 
 
-# < 50000 - 5%
-# > 50000 - 7%
-# Finance - 10%
+# < 50000 - 5% bonus
+# > 50000 - 7%  bonus
+# Finance - 10% bonus
 
 SELECT first_name, last_name, salary, dept_id,
 CASE
