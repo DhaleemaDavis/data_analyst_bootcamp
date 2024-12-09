@@ -16,9 +16,9 @@ INNER JOIN parks_and_recreation.employee_salary
  ON employee_demographics.employee_id = employee_salary.employee_id;
 
 SELECT * 
-FROM parks_and_recreation.employee_demographics AS dem
+FROM parks_and_recreation.employee_demographics AS dem    
 INNER JOIN parks_and_recreation.employee_salary AS sal
- ON dem.employee_id = sal.employee_id;
+ ON dem.employee_id = sal.employee_id;     # aliasing 'AS'#
  
 SELECT dem.employee_id,
 dem.first_name,
@@ -31,7 +31,7 @@ INNER JOIN parks_and_recreation.employee_salary AS sal
  
 
 
-# OUTER Joins --- Left and Right joins
+############  OUTER Joins --- Left and Right joins ################
  
  SELECT * 
 FROM parks_and_recreation.employee_demographics AS dem
@@ -44,11 +44,20 @@ FROM parks_and_recreation.employee_demographics AS dem
 RIGHT JOIN parks_and_recreation.employee_salary AS sal
  ON dem.employee_id = sal.employee_id;
  
- #  SELF Joins
+ ############  SELF Joins    ############### 
  
-SELECT emp1.employee_id id_santa,
-emp1.first_name santa_first_name,
-emp1.last_name santa_last_name,
+ 
+SELECT emp1.first_name,
+emp1.last_name,
+emp2.first_name,
+emp2.last_name
+FROM parks_and_recreation.employee_salary AS emp1
+JOIN parks_and_recreation.employee_salary AS emp2
+ ON emp1.employee_id = emp2.employee_id;
+ 
+SELECT emp1.employee_id AS id_santa,
+emp1.first_name AS santa_first_name,
+emp1.last_name AS santa_last_name,
 emp2.employee_id,
 emp2.first_name,
 emp2.last_name
@@ -58,7 +67,7 @@ JOIN parks_and_recreation.employee_salary AS emp2
  
  
  
- # Joining multiple table together
+ ########### Joining multiple table together ################
  
  SELECT *
  FROM parks_and_recreation.employee_demographics as dem
@@ -66,6 +75,5 @@ JOIN parks_and_recreation.employee_salary AS emp2
   ON dem.employee_id = sal.employee_id
 INNER JOIN parks_and_recreation.parks_departments as pd
   ON sal.dept_id = pd.department_id ;
-
  
  
