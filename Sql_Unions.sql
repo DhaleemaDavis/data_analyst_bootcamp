@@ -13,7 +13,7 @@ SELECT first_name, last_name
 FROM parks_and_recreation.employee_demographics
 UNION 
 SELECT first_name, last_name
-FROM parks_and_recreation.employee_salary;
+FROM parks_and_recreation.employee_salary;        ## by default union is 'union distinct' ##
 
 SELECT first_name, last_name
 FROM parks_and_recreation.employee_demographics
@@ -38,5 +38,5 @@ SELECT first_name, last_name, 'Highly Paid' as label
 FROM parks_and_recreation.employee_salary
 WHERE salary > 70000
 ORDER BY first_name, last_name;
-
+ ## older man union older lady union highly paid ##
 
