@@ -1,5 +1,12 @@
 #####  CTEs #######
+# Using Common Table Expressions (CTE)
+# A CTE allows you to define a subquery block that can be referenced within the main query. 
+# It is particularly useful for recursive queries or queries that require referencing a higher level
+# this is something we will look at in the next lesson/
 
+# Let's take a look at the basics of writing a CTE:
+# -- First, CTEs start using a "With" Keyword. Now we get to name this CTE anything we want
+# -- Then we say as and within the parenthesis we build our subquery/table we want
 select gender,
 avg(salary),
 min(salary),
